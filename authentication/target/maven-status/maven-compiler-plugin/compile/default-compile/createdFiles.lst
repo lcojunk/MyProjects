@@ -1,0 +1,7 @@
+de\adesso\referencer\authentication\Application.class
+de\adesso\referencer\authentication\rest\AuthenticationResponse.class
+de\adesso\referencer\authentication\JWTokens\JWTokenFactory.class
+de\adesso\referencer\authentication\service\LDAPAuthentication.class
+de\adesso\referencer\authentication\JWTokens\JWToken.class
+de\adesso\referencer\authentication\model\User.class
+de\adesso\referencer\authentication\rest\LDAPAuthenticationRESTController.class

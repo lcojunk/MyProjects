@@ -1,0 +1,17 @@
+<nav>
+    <ul class="pagination cursor-pointer no-select">
+        <li ng-class="{'disabled':pagination.current==1}">
+            <a ng-click="setCurrent(pagination.current - 1)" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li ng-repeat="pageNumber in pages" ng-class="{'active':pageNumber == pagination.current}">
+            <a ng-click="setCurrent(pageNumber)" ng-bind="pageNumber"></a>
+        </li>
+        <li ng-class="{'disabled':pagination.current==pagination.last}">
+            <a ng-click="setCurrent(pagination.current + 1)" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

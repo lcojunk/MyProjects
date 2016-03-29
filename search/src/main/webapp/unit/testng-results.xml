@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<testng-results passed="42" failed="0" skipped="0" total="42">
+  <reporter-output/>
+  <suite name="PhantomJS 2.1.1 (Windows 7 0.0.0)">
+    <groups/>
+    <test name="Test1">
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:main">
+        <test-method name="should be defined" description="should be defined" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="d67770726e8252bd2e72ae0b3275d0de" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:dataService">
+        <test-method name="should exist" description="should exist" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="2b1f253d47048d658abf5b887e8933f1" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:dataService,whengettingareferencebyid">
+        <test-method name="should make a GET request with the given id" description="should make a GET request with the given id" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="b89de8b8093319004859c2257c8285f2" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:dataService,whencallingforfacetresult">
+        <test-method name="should make a POST request" description="should make a POST request" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="149f0cf7a90f8153c0bce748edacb853" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:detail">
+        <test-method name="should be defined" description="should be defined" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="d67770726e8252bd2e72ae0b3275d0de" status="PASS"/>
+        <test-method name="should bind the page to the view model" description="should bind the page to the view model" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="800734d4ea1e74f29e07f2b1f910e934" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:detail,wheninstantiatedwithstart-indexboundtoscope">
+        <test-method name="should bind the start-index" description="should bind the start-index" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="77e7a4b55a35d91ed80cea50d66e1c57" status="PASS"/>
+        <test-method name="should get the reference by its id" description="should get the reference by its id" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="87484ca7da2109a85f912c51a556694c" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:input">
+        <test-method name="should be defined" description="should be defined" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="d67770726e8252bd2e72ae0b3275d0de" status="PASS"/>
+        <test-method name="should retrieve search model and attach to controller" description="should retrieve search model and attach to controller" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="c91bf9af3d043675dcc8bbfdbf60518f" status="PASS"/>
+        <test-method name="should retrieve search model" description="should retrieve search model" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="558f9f5e3ef25ba735e9314ca99392d3" status="PASS"/>
+        <test-method name="should call search-service when searching" description="should call search-service when searching" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="bc8061cda292faea506f6cbfb32e1d0d" status="PASS"/>
+        <test-method name="should call the search-model when resetting and search again" description="should call the search-model when resetting and search again" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="1644136486901c0c37c5f4e93b62d9f6" status="PASS"/>
+        <test-method name="should return suggestions from search-service as promise" description="should return suggestions from search-service as promise" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="d02869905f569dee6b8bbb9dcac0c207" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:SearchModel">
+        <test-method name="should exist" description="should exist" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="2b1f253d47048d658abf5b887e8933f1" status="PASS"/>
+        <test-method name="should initialize model correctly" description="should initialize model correctly" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="8ba6e11417cdf9ec58950bda8bc43092" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:SearchModel,whenserializing">
+        <test-method name="should define a serilized entity" description="should define a serilized entity" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="35eaa39dc2771234afa5733c01b6e8c3" status="PASS"/>
+        <test-method name="should serialize tags if there are any" description="should serialize tags if there are any" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="db68bd1d1cdac420f52ee6869c086fc7" status="PASS"/>
+        <test-method name="should not serialize tags if there are none" description="should not serialize tags if there are none" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="c4ed8dc4477fc1f92a4629bf75fcda7e" status="PASS"/>
+        <test-method name="should serialize manDays if there has been user input" description="should serialize manDays if there has been user input" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="73059d23a2322f01e75f84e7238e276e" status="PASS"/>
+        <test-method name="should not serialize manDays if there has not been user input" description="should not serialize manDays if there has not been user input" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="7ea2e163a897826ce2092792e3848acd" status="PASS"/>
+        <test-method name="should serialize volume if there has been user input" description="should serialize volume if there has been user input" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="897b5296b94fbc90a48f4559ff2f957b" status="PASS"/>
+        <test-method name="should not serialize volume if there has not been user input" description="should not serialize volume if there has not been user input" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="e39c3148d2696c94f754355b84c5dca4" status="PASS"/>
+        <test-method name="should serialize lobs if any are selected" description="should serialize lobs if any are selected" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="a11dfc2f93887065991770c8c5bfc7c5" status="PASS"/>
+        <test-method name="should not serialize lobs if none are selected" description="should not serialize lobs if none are selected" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="ebd44248adcf9e667c94965cadc6a767" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:result">
+        <test-method name="should be defined" description="should be defined" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="d67770726e8252bd2e72ae0b3275d0de" status="PASS"/>
+        <test-method name="should retrieve the result page" description="should retrieve the result page" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="445fffecf071075d495d082f4bbffbbc" status="PASS"/>
+        <test-method name="should call search-service when getting page" description="should call search-service when getting page" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="b11238c63dd06ac30658f550e967110a" status="PASS"/>
+        <test-method name="should initialize detail-modal when show reference detail" description="should initialize detail-modal when show reference detail" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="e0a18242e4656e70cc9ce0efb1bfaf37" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:result,whensorting">
+        <test-method name="should set the sort type accordingly" description="should set the sort type accordingly" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="98fa1e41a5df6f21dd6d795a23ad7340" status="PASS"/>
+        <test-method name="should call search-service" description="should call search-service" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="7b9ba39831ac47cb3f37709e7fb44286" status="PASS"/>
+        <test-method name="should not set the type, if called with undefined type" description="should not set the type, if called with undefined type" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="4bd5c305c3c238efbc3ce4d680a6dfdb" status="PASS"/>
+        <test-method name="should sort ascending" description="should sort ascending" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="9bd994dc0ae2c3ccf9605d909f7672ab" status="PASS"/>
+        <test-method name="should reverse sort order when called with the same type" description="should reverse sort order when called with the same type" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="acc9b677eb56ce29d82a76e1a027a497" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:searchService">
+        <test-method name="should exist" description="should exist" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="2b1f253d47048d658abf5b887e8933f1" status="PASS"/>
+        <test-method name="should open a new tab to download document" description="should open a new tab to download document" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="cca49394ecdfc7356995e5ad78a343c7" status="PASS"/>
+        <test-method name="should return suggestions from data-service as promise" description="should return suggestions from data-service as promise" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="e062c4d2189775452bffe0815523e1e3" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Service:searchService,whensearching">
+        <test-method name="should serialize search-model" description="should serialize search-model" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="347cd3838fca797dae82809e46000599" status="PASS"/>
+        <test-method name="should call data-service" description="should call data-service" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="f4b81cc999882caab9b3d5d2581cc6d4" status="PASS"/>
+        <test-method name="should assign search-result" description="should assign search-result" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="13ad7cb08166d0d0c13d7c316dc1f5d6" status="PASS"/>
+        <test-method name="should update search-model" description="should update search-model" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="e3f945145ea623906a21821dfa66620f" status="PASS"/>
+      </class>
+      <class name="PhantomJS2_1_1Windows70_0_0.Controller:multiChoice">
+        <test-method name="should be defined" description="should be defined" duration-ms="0" started-at="2016-03-29T16:18:25Z" finished-at="2016-03-29T16:18:25Z" signature="d67770726e8252bd2e72ae0b3275d0de" status="PASS"/>
+      </class>
+    </test>
+  </suite>
+</testng-results>

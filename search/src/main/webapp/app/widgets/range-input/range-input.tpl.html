@@ -1,0 +1,16 @@
+<rzslider
+        rz-slider-model="vm.model.min" rz-slider-options="vm.sliderOptions" rz-slider-floor="vm.model.floor"
+        rz-slider-ceil="vm.model.ceil"
+        rz-slider-high="vm.model.max" id="manDaysInput"></rzslider>
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <input type="number" class="form-control min-input" align="right" id="{{::id}}-min-input"
+               ng-model="vm.model.min" min="vm.model.floor" max="vm.model.ceil" title="Minimum"
+               ng-change="vm.minInputChange()" ng-model-options="{debounce:{'default':500,'blur':0}}">
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <input type="number" class="form-control max-input" align="right" id="{{::id}}-max-input"
+               ng-model="vm.model.max" min="vm.model.floor" max="vm.model.ceil" title="Maximum"
+               ng-change="vm.maxInputChange()" ng-model-options="{debounce:{'default':500,'blur':0}}">
+    </div>
+</div>

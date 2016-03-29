@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="projectEndSelect" class="control-label">
+        <span>Projektende</span>
+    </label>
+    <select ng-change="vm.search()" class="form-control" id="projectEndSelect" ng-model="vm.model.projectEnd.selected"
+            ng-options="option as option.label for option in vm.model.projectEnd.options">
+        <option value=''>Keine Einschränkung</option>
+    </select>
+</div>

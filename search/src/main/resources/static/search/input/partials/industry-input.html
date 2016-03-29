@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label class="control-label" for="industryInput">
+        <span>Branche</span>
+    </label>
+
+    <div multi-choice ng-model="vm.model.industry.options" multi-choice-change="vm.search"
+         multi-choice-sort-type="entity.name" multi-choice-query="true" id="industryInput"
+         multi-choice-display-property="name"></div>
+</div>

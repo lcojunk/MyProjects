@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.adesso.referencer.utilities.referenceCreator.Entities.search.SearchRefefenceEntityFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec - in de.adesso.referencer.utilities.referenceCreator.Entities.search.SearchRefefenceEntityFactoryTest

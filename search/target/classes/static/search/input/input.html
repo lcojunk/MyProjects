@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="search-input-header">Suchkriterien</h4>
+        <button class="btn btn-link filter-reset-btn pull-right" ng-click="vm.reset()">Zurücksetzen</button>
+    </div>
+</div>
+<div class="form-group search-input-group">
+    <tags-input
+            ng-model="vm.model.tags"
+            replace-spaces-with-dashes="false"
+            placeholder="Suchen nach..."
+            on-tag-added="vm.search()"
+            on-tag-removed="vm.search()">
+        <auto-complete
+                select-first-match="false"
+                source="vm.getSuggestions($query)"></auto-complete>
+    </tags-input>
+</div>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <span ng-include="'search/input/partials/man-days-input.html'"></span>
+        <hr>
+        <span ng-include="'search/input/partials/volume-input.html'"></span>
+        <hr>
+        <span ng-include="'search/input/partials/project-end-input.html'"></span>
+        <hr>
+        <span ng-include="'search/input/partials/service-end-input.html'"></span>
+        <hr>
+        <span ng-include="'search/input/partials/lob-input.html'"></span>
+        <hr>
+        <span ng-include="'search/input/partials/industry-input.html'"></span>
+        <hr>
+        <span ng-include="'search/input/partials/tech-input.html'"></span>
+    </div>
+</div>

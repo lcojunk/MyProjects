@@ -1,0 +1,258 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" ng-keyup="vm.onKeyUp($event)">
+    <div class="modal-dialog modal-lg ref-modal">
+        <div class="modal-content">
+            <div class="modal-header clearfix">
+                <!-- <button type="button" class="close" aria-label="Close" ng-click="$hide()"><span
+                        aria-hidden="true">&times;</span></button> -->
+                <h4 class="modal-title pull-left">{{vm.reference.clientname}} -
+                    {{vm.reference.projectname}}</h4>
+
+                <div class="pull-right">
+                    <button class="btn btn-link btn-lg modal-nav-btn" ng-click="vm.prevReference()"
+                            ng-disabled="vm.referenceIndex == 0">
+                        <span class=" glyphicon glyphicon-step-backward"></span></button>
+                    <button class="btn btn-link btn-lg modal-nav-btn" ng-click="vm.nextReference()"
+                            ng-disabled="vm.referenceIndex == vm.page.content.length - 1">
+                        <span class=" glyphicon glyphicon-step-forward"></span></button>
+                    <button class="btn btn-link btn-lg modal-nav-btn" ng-click="$hide()"><span
+                            class=" glyphicon glyphicon-remove"></span></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h3 class="text-center">{{vm.reference.clientname}}</h3>
+
+                        <h3 class="text-center">{{vm.reference.projectname}}</h3>
+                        <blockquote class="blockquote-reverse" ng-if="vm.reference.clientData.testimonal">
+                            <p>{{vm.reference.clientData.testimonal}}</p>
+                            <footer>Client Statement Info</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-sm-5">
+                        <img ng-src="/search/api/references/{{vm.reference.id}}/logo" err-src="./assets/no-logo.png"
+                             class="clientlogo"
+                             alt="Kundenlogo" title="Kundenlogo" width="145" height="145">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="panel panel-default data-panel">
+                            <div class="panel-body">
+                                <table class="table table-condensed">
+                                    <tr>
+                                        <th>Line of Business</th>
+                                        <td>{{vm.reference.lob.name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Branche</th>
+                                        <td><span ng-repeat="branch in vm.reference.branches">{{::branch.name}}{{$last ? '' : ', '}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Projektbeginn</th>
+                                        <td>{{vm.reference.projectStart | date:'MMM yyyy' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Projektende</th>
+                                        <td>{{vm.reference.projectEnd | date:'MMM yyyy' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Wartungsbeginn</th>
+                                        <td>{{vm.reference.serviceStart | date:'MMM yyyy' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Wartungsende</th>
+                                        <td>{{vm.reference.serviceEnd | date:'MMM yyyy' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Personentage (adesso)</th>
+                                        <td>{{vm.reference.ptAdesso}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Personentage (gesamt)</th>
+                                        <td>{{vm.reference.ptTotalProject}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Volumen (adesso)</th>
+                                        <td>{{vm.reference.costAdesso | currency : "€"}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Volumen (gesamt)</th>
+                                        <td>{{vm.reference.costTotal | currency : "€"}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Technologien</th>
+                                        <td><span ng-repeat="tech in vm.reference.technologies">{{::tech.name}}{{$last ? '' : ', '}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Involvierte Rollen</th>
+                                        <td><span ng-repeat="role in vm.reference.involvedRoles">{{::role.name}}{{$last ? '' : ', '}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mitglieder des Projektteams</th>
+                                        <td><span ng-repeat="member in vm.reference.teammembers">{{::member.first_name}} {{::member.last_name}}{{$last ? '' : ', '}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Schwerpunkte</th>
+                                        <td><span ng-repeat="focus in vm.reference.focuses">{{::focus.name}}{{$last ? '' : ', '}}</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Besonderheiten</th>
+                                        <td><span ng-repeat="char in vm.reference.characteristics">{{::char.name}}{{$last ? '' : ', '}}</span>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <ul class="list-group ref-modal-group">
+                            <li class="list-group-item">
+                                <h4 class="ref-attr-heading">Kundenprofil</h4>
+
+                                <p>{{vm.reference.clientProfil}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="ref-attr-heading">Ausgangslage</h4>
+
+                                <p>{{vm.reference.projectBackground}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="ref-attr-heading">Lösungsansatz</h4>
+
+                                <p>{{vm.reference.projectSolution}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="ref-attr-heading">Ergebnis und Kundenmehrwert</h4>
+
+                                <p>{{vm.reference.projectResults}}</p>
+                            </li>
+                            <li class="list-group-item">
+                                <h4 class="ref-attr-heading">Ausführliche Projektbeschreibung</h4>
+
+                                <p>{{vm.reference.preciseDescription}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-5">
+                        <button type="button" class="btn btn-primary btn-block download-btn"
+                                ng-click="vm.downloadDocument()">
+                            <span class="glyphicon glyphicon-download-alt btn-icon"></span>
+                            Dokument herunterladen
+                        </button>
+                        <div class="panel panel-default data-panel side-panel">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-condensed">
+                                        <caption>Administrative Daten</caption>
+                                        <tr>
+                                            <th>Freigabestatus</th>
+                                            <td>
+                                            <span class="label label-danger" ng-bind="VALUES.STATUS.NOT_RELEASED.TEXT"
+                                                  ng-if="vm.reference.releaseStatus == VALUES.STATUS.NOT_RELEASED.IDENTIFIER"></span>
+                                            <span class="label label-default"
+                                                  ng-bind="VALUES.STATUS.ANONYMOUSLY_RELEASED.TEXT"
+                                                  ng-if="vm.reference.releaseStatus == VALUES.STATUS.ANONYMOUSLY_RELEASED.IDENTIFIER"></span>
+                                            <span class="label label-success"
+                                                  ng-bind="VALUES.STATUS.FULLY_RELEASED.TEXT"
+                                                  ng-if="vm.reference.releaseStatus == VALUES.STATUS.FULLY_RELEASED.IDENTIFIER"></span>
+                                            <span class="label label-info"
+                                                  ng-bind="VALUES.STATUS.INDIVIDUALLY_RELEASED.TEXT"
+                                                  ng-if="vm.reference.releaseStatus == VALUES.STATUS.INDIVIDUALLY_RELEASED.IDENTIFIER"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Freigegeben durch</th>
+                                            <td>{{vm.reference.approver.first_name}} {{vm.reference.approver.last_name}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Zugehörige Referenzen</th>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default data-panel side-panel">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-condensed">
+                                        <caption>adesso Ansprechpartner</caption>
+                                        <tr>
+                                            <th>Name</th>
+                                            <td>{{vm.reference.adessoContactName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Rolle bei adesso</th>
+                                            <td>{{vm.reference.adessoContactAdessoRole.name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Rolle im Projekt</th>
+                                            <td>{{vm.reference.adessoContactProjectRole.name}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>E-Mail</th>
+                                            <td>{{vm.reference.adessoContactMail}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Telefon</th>
+                                            <td>{{vm.reference.adessoContactPhone}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-condensed">
+                                        <caption>Stellvertreter</caption>
+                                        <tr>
+                                            <th>Name</th>
+                                            <td>{{vm.reference.adessoDeputyContactName}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Rolle im Projekt</th>
+                                            <td>{{vm.reference.adessoDeputyContactProjectRole.name}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default data-panel side-panel">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-condensed">
+                                        <caption>Kontaktdaten des Kunden</caption>
+                                        <tr>
+                                            <th>Name</th>
+                                            <td>
+                                                {{vm.reference.clientData.titel}} {{vm.reference.clientData.first_name}}
+                                                {{vm.reference.clientData.last_name}}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>Anschrift</th>
+                                            <td>
+                                                <address>{{vm.reference.clientData.address}}</address>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>E-Mail</th>
+                                            <td>{{vm.reference.clientData.email}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Telefon</th>
+                                            <td>{{vm.reference.clientData.tel}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

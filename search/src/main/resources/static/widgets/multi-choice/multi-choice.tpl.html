@@ -1,0 +1,21 @@
+<input ng-if="vm.query" type="text" class="form-control query-input" ng-model="vm.queryModel"
+       placeholder="Suchen ...">
+
+<div class="well well-sm option-well">
+    <div class="checkbox checkbox-primary option-checkbox no-select"
+         ng-repeat="selectedOption in vm.model | orderBy:vm.sortType | filter:{selected: 'true'}">
+        <input class="cursor-pointer" type="checkbox" ng-model="selectedOption.selected" ng-change="vm.callback()"
+               id="{{::vm.id+'-s-'+$index}}">
+        <label for="{{::vm.id+'-s-'+$index}}" class="filter-option cursor-pointer">
+            <span ng-bind="selectedOption.entity[vm.displayProperty]"></span>
+        </label>
+    </div>
+    <div class="checkbox checkbox-primary no-select"
+         ng-repeat="option in vm.model | orderBy:vm.sortType | filter:vm.queryModel | filter:{selected: '!true'}">
+        <input class="cursor-pointer" type="checkbox" ng-model="option.selected" ng-change="vm.callback()"
+               id="{{::vm.id+'-o-'+$index}}">
+        <label for="{{::vm.id+'-o-'+$index}}" class="filter-option cursor-pointer">
+            <span ng-bind-template="{{option.entity[vm.displayProperty]}} ({{option.count}})"></span>
+        </label>
+    </div>
+</div>

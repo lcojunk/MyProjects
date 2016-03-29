@@ -1,0 +1,73 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="testng-results">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="reporter-output"/>
+        <xs:element name="suite">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="groups">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="method" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:int" name="class" use="optional"/>
+                                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                                  <xs:attribute type="xs:int" name="signature" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="test">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="class">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="test-method" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="description" use="optional"/>
+                                  <xs:attribute type="xs:byte" name="duration-ms" use="optional"/>
+                                  <xs:attribute type="xs:dateTime" name="finished-at" use="optional"/>
+                                  <xs:attribute type="xs:string" name="name" use="optional"/>
+                                  <xs:attribute type="xs:int" name="signature" use="optional"/>
+                                  <xs:attribute type="xs:dateTime" name="started-at" use="optional"/>
+                                  <xs:attribute type="xs:string" name="status" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:int" name="name"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="name"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="failed"/>
+      <xs:attribute type="xs:byte" name="passed"/>
+      <xs:attribute type="xs:byte" name="skipped"/>
+      <xs:attribute type="xs:byte" name="total"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

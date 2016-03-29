@@ -1,0 +1,34 @@
+server:
+    port: 9097
+spring:
+    data:
+        elasticsearch:
+            cluster-nodes: "localhost:9300"
+            repositories:
+                enabled: true
+
+logging:
+    file: "logs/search.log"
+
+---
+
+spring:
+    profiles: dev
+
+#disable error log: "DiscoveryClient_SEARCH/xx-xxx-xxxxxxx - registration failedjava.net.ConnectException: Connection refused: connect
+logging:
+    level:
+        com.netflix.discovery.DiscoveryClient: 'OFF'
+---
+spring:
+    profiles: docker
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://servicediscovery:8761/eureka/
+logging:
+    level:
+        com.netflix.discovery.DiscoveryClient: 'INFO'
+    file: "tmp/logs/search.log"

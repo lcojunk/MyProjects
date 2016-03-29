@@ -1,0 +1,10 @@
+<div class="form-group">
+    <label for="serviceEndSelect" class="control-label">
+        <span>Wartungsende</span>
+    </label>
+    <select ng-change="vm.search()" class="form-control" id="serviceEndSelect" ng-model="vm.model.serviceEnd.selected"
+            ng-options="option as option.label for option in vm.model.serviceEnd.options"
+            ng-disable="vm.model.serviceEnd.options.length == 0">
+        <option value=''>Keine Einschränkung</option>
+    </select>
+</div>
