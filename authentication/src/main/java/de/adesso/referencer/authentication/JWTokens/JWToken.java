@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 /**
  *
- * @author odzhara-ongom
+ * @author odzhara-ongom leon Class for tokens
  */
 public class JWToken {
 
